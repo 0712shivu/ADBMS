@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<h1>JSON program</h1>
+<body>
+	<p id="demo"> </p>
+	<script language="javascript">
+
+	/*var object='{"language":"java","author":"herbert schild"}';
+	document.write("<h4>language : "+object.language+"<h4>");
+
+	var txt='{"name":"f_prg","age":20,"cars":null}';
+	var obj1=JSON.parse(txt);
+	document.getElementById("demo").innerHTML=obj1.name+","+obj1.age+","+obj1.cars;
+	for(x in obj1)
+		document.write(obj1[x]);
+
+	var arr=["shivu","shivani","keri"];
+	var myJSON=JSON.stringify(arr);
+	document.getElementById("demo").innerHTML=myJSON;
+*/
+	var xmlhttp=XMLHttpRequest();
+	xmlhttp.onreadystatechange=function()
+	{
+		if(this.readyState==4 && this.status==200)
+		{
+			var obj1=JSON.parse(this.responseText);
+			for(x in obj1)
+				document.write(obj1[x]);
+			//document.getElementById("demo").innerHTML=obj1.name;
+		}
+	}
+	xmlhttp.open("GET","JSONdemo.txt",true);
+	xmlhttp.send();
+	</script>
+</body>
+</html>
