@@ -1,0 +1,9 @@
+{
+	"name"="Shivani",
+	"age":22,
+	"Pets":[
+				{"animal":"dog","name":"tommy"},
+				{"animal":"cat","name":"rani"},
+				{"animal":"rabbit","name":"jerry"}
+			]
+}
